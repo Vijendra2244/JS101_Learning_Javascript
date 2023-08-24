@@ -1,0 +1,34 @@
+// Problem 1 : Given an array print the position (starting with 1) and the element in a single line.
+let array=[1,10,20,56,76,68,100]
+  for(let i=1;i<array.length;i++)
+  {   console.log(" index of "+i," is value  "+ array[i])
+                                 
+                                  
+ }
+
+
+// Problem 2 : Given a character in lower case print the upper case character
+let loverCase= "a";
+console.log(loverCase.toUpperCase())
+
+
+
+
+// Problem 3 : Given an array of numbers find the average of all the even numbers.
+let array=[1,2,3,4,5,6,7,8,9,10]
+let sum=0;
+let average=0;
+let count=0;
+for(let i=0;i<array.length;i++){
+  if(array[i]%2===0){
+    console.log(array[i])
+    sum=sum+array[i];
+    count++;
+    
+  }
+  
+}
+console.log("------")
+console.log("sum = ",sum);
+console.log("------")
+console.log("average = ",average=sum/count);
