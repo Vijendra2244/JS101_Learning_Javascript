@@ -1,0 +1,106 @@
+// Create a rectangle object with length and width properties
+// Create two methods area and perimeter, that will return the area and perimeter of the rectangle
+
+
+let rectangle = {
+  length : 13,
+  width  : 34,
+  area : function (){
+    let area_of_rectangle = this.length * this.width;
+    return  area_of_rectangle;
+  },
+  perimeter : function (){
+    let perimeter_of_rectangle = 2*(this.length + this.width);
+    return  perimeter_of_rectangle;
+  }
+}
+console.log(rectangle.area());
+console.log(rectangle.perimeter());
+
+
+
+
+// - Given an input of products in the below format (Name Quantity Price)
+// - Input
+
+// ```
+// ["Rice", "Dal", "Salt"]
+// [2, 3, 1]
+// [60, 50, 20]
+
+// ```
+
+// - Create an object with the key `data` which is an array of objects with the format `{name: "Rice", quantity: 2, price: 60}`
+// - The object must have a method called `total` which calculates the total values of items (multiplying quantity of each with its price)
+// - Sample output for the above case `290`
+
+
+let name = ["Rice", "Dal", "Salt"]
+let quantity = [2, 3, 1]
+let price = [60, 50, 20]
+let arr=[];
+for(let i=0;i<name.length;i++){
+  let data = {};
+    data.name = name[i],
+    data.quantity = quantity[i],
+    data.price = price[i],
+    arr.push(data)
+}
+console.log(arr)
+let data = {
+  arr : arr,
+  total : function(){
+    let sum = 0;
+    for(let i=0;i<this.arr.length;i++){
+     sum+= this.arr[i].quantity* this.arr[i].price
+    }
+    return sum
+  }
+}
+   console.log(data.total())
+      
+
+
+
+// Write a function called calculateSalesTotals()
+//  which returns an array with new two new keys (sale and total). The key 'sale' equals the calculated sale price based on the original price and the discount. The key 'total' equals the computed total based on stock, the original price and the discount. The default value would be 0.0.
+var sales = [
+  { item: 'PS4 Pro', stock: 3, original: 399.99 },
+  { item: 'Xbox One X', stock: 1, original: 499.99, discount: 0.1 },
+  { item: 'Nintendo Switch', stock: 4, original: 299.99 },
+  { item: 'PS2 Console', stock: 1, original: 299.99, discount: 0.8 },
+  { item: 'Nintendo 64', stock: 2, original: 199.99, discount: 0.65 }
+];
+
+function calculateSalesTotals() {
+  var updatedSales = [];
+  
+  for (var i = 0; i < sales.length; i++) {
+    var item = sales[i];
+    
+    var salePrice = item.original;
+    if (item.discount !== undefined) {
+      salePrice = salePrice - (item.discount * salePrice);
+    }
+    
+    var total = item.stock * salePrice;
+    
+    var updatedItem = {
+      item: item.item,
+      stock: item.stock,
+      original: item.original,
+      discount: item.discount || !item.discount,
+      sale: salePrice,
+      total: total
+    };
+    
+    updatedSales.push(updatedItem);
+  }
+  
+  return updatedSales;
+}
+
+
+
+var updatedSales = calculateSalesTotals();
+console.log(updatedSales);
