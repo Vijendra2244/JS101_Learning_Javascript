@@ -1,0 +1,45 @@
+// Problem 1: Find the average of elements present at odd index of the following array.
+
+
+let arr = [10, 24, 56, 72, -10, -88, 100, 564];
+let total=0;
+let count=0;
+let aver=0
+let odd = arr.filter(function(arr,index){
+   return index%2!=0
+ }).map((ele) =>{
+  total+=ele
+  count++;
+  return total
+})
+// console.log(odd)
+console.log("Total of odd index array",total);
+console.log("count of odd index",count)
+console.log("Average",aver=total/count)
+
+
+
+// Problem 2: Create a new array from the given array such that each element of the new array is raised to a power of 5.
+
+let Input = [2, 3, 4, 6, 7];
+let power = Input.map(ele => ele**5)
+console.log(power)
+
+
+
+
+// Problem 3: Taking the following array into consideration get the output as given below:
+
+let arr = [3,4,5,6,7];
+
+let output = "";
+
+  arr.forEach((element, index) => {
+  if (element % 2 !== 0) {
+   output += element + " -"
+  }
+});
+output = output.slice(0,7)
+console.log(output)
+
+
