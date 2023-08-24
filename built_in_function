@@ -1,0 +1,119 @@
+// Problem 1. Write a custom function that has the same behavior of inbuilt Array Join
+
+function customJoin(arr1, connect) {
+  let result = '';
+  for (let i = 0; i < arr1.length; i++) {
+    result += arr1[i];
+    if (i < arr1.length - 1) {
+      result += connect;
+    }
+  }
+
+  return result;
+}
+
+
+const arr1 = ['Hello', 'world'];
+const connect = '-';
+const joinedString = customJoin(arr1,connect);
+console.log(joinedString); 
+
+
+
+
+// Write a custom function that has the same behavior of inbuilt Array Last Index Of Function
+
+
+function customLastIndex(arr,last){
+  let lastIndex="Not Found";
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]==last){
+      lastIndex=i
+    }
+  }
+  return lastIndex
+}
+let arr=['todo','dog','cat','elephant']
+let lastIndex=customLastIndex(arr,'cat')
+console.log(lastIndex)
+
+
+
+// Write a custom function that has the same behavior of inbuilt Array Slice Function
+
+
+function customSlice(animal,a,b){
+  let bag=[];
+  if(a>0 && b>0){
+    for(let i=a;i<b;i++)
+    bag.push(animal[i])
+  }
+  else if(a>0 && !b){
+    for(let i=a;i<animal.length;i++){
+      bag.push(animal[i])
+    }
+  }
+    else if(a<0 && !b){
+    a=animal.length+a;
+    for(let i=a;i<animal.lenngth;i++){
+      bag.push(animal[i])
+    }
+    }
+  else if(a>0 && b<0){
+    b=animal.length+b;
+    for(let i=a;i<b;i++){
+      bag.push(animal[i])
+    }
+  }
+  else if(!a && !b){
+    a=0;
+    b=animal.length;
+    for(let i=a;i<b;i++){
+      bag.push(animal[i])
+    }
+  }
+  console.log(bag)
+}
+customSlice(['ant','bison','duck','camel','elephent'],4)
+
+
+
+// Write a custom function that has the same behavior of inbuilt String Substring Function
+
+
+function customSubstring(str,start,end){
+  let bag="";
+  if(start > 0 && end > 0){
+    for(let i=start;i<end;i++){
+    bag+=str[i]
+      }
+  }
+  if(start > 0 && !end){
+    for(let i=start;i<str.length;i++){
+      bag+=str[i]
+    }
+  }console.log(bag)
+}
+customSubstring("mozilla",1,3)
+customSubstring("mozilla",2)
+
+
+
+
+
+// Write a custom function that has the same behavior of inbuilt Array Includes Function
+
+function customInclude(arr,include){
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]==include){
+      return true;
+    }
+    else{
+      return false
+    }
+  }
+}
+let result=customInclude(['cat','bat','jat'],'cat')
+console.log(result)
+let ans=customInclude(['cat','bat','jat'],'Bat')
+console.log(ans)
