@@ -1,0 +1,78 @@
+// problem 1  Given an object of student grades and their marks in the mentioned below format, print the highest scored student for each grade along with the total
+
+
+
+
+let data=[
+	{
+		grade: "V",
+		students: [
+			{name: "Nrupul", marks: [10, 20, 30]},
+			{name: "Prateek", marks: [20, 30, 40]}
+		]
+	},
+	{
+		grade: "VI",
+		students: [
+			{name: "Aman", marks: [10, 20, 30]},
+			{name: "Albert", marks: [20, 30, 40]}
+		]
+	},
+	{
+		grade: "VII",
+		students: [
+			{name: "Yogesh", marks: [10, 20, 30]},
+			{name: "Sandhya", marks: [20, 30, 40]}
+		]
+	}
+]
+for(let i=0;i<data.length;i++){
+  
+ let student1=data[i]["students"][0].marks
+ let student2=data[i]["students"][1].marks
+ let sum1=0;
+ let sum2=0;
+  
+  for(let j=0;j<student1.length;j++){
+    sum1+=student1[j];
+    sum2+=student2[j];
+  }  
+   if(sum2>sum1){
+    
+    console.log(data[i]["grade"],"-",data[i]["students"][0] 
+  ["name"],sum2)
+  
+  }
+}
+
+
+
+
+//problem 2 - Given a list of user data with name and age, create a list of key-value pairs from the input
+// - From the generated data, print the users whose age is more than 30
+
+
+
+let arr1=["Nrupul", "Prateek", "Aman", "Albert", "Yogesh"]
+let arr2=[32, 30, 26, 28, 44]
+let arr3 = [];
+  for (let i = 0; i < arr1.length; i++) {
+  let obj1 = {
+    name: arr1[i],
+    age: arr2[i]
+   };
+  arr3.push(obj1);
+
+ 
+  }
+console.log(arr3)
+
+console.log("----------")
+for (let i = 0; i < arr3.length; i++) {
+  if (arr3[i]["age"] > 30) {
+    console.log(arr3[i].name);
+  }
+}
+
+
+

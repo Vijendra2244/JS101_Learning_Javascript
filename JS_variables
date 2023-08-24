@@ -1,0 +1,74 @@
+//1 Print "Masai School" in the console followed by "A Transformation in Education" in next line
+
+
+var name="Masai school";
+console.log(name)
+var a="A transformation In Education"
+console.log(a)
+
+//2 Define a variable called name with your Name as the assigned value
+// Print the value stored in the variable name
+// Change the variable to store your father's name
+// Print the value stored in the variable name
+// Change the variable again to store your mother's name.
+// Print the value stored in the variable name
+
+
+let name="Aman silawat";
+let fatherName="Lakhan silawat"
+let motherName="seema silawat"
+console.log("Name        = ",name)
+console.log("Father Name = ",fatherName)
+console.log("Mother Name = ",motherName)
+
+
+
+
+// Create a variable name to store your name
+// Create a variable age to store your age
+// Print the values stored in the variable on one line followed by the type of the variable in the next line
+
+
+var Name;
+Name="Aman Silawat";
+var Age;
+Age=21;
+console.log("name=",Name,"Age=",Age)
+console.log(typeof(Name),typeof(Age))
+
+
+
+
+
+// Store the name, school, grade, section, rollno and the marks scored by the student in 3 subjects
+// Print the report card of the student (You can make it look nice by using some keyboard symbols )
+// Explore ASCII ART (https://en.wikipedia.org/wiki/ASCII_art (Links to an external site.)) or Text Art (https://fsymbols.com/text-art/ (Links to an external site.)) for some inspiration
+
+
+
+let name=" Aman Silawat|";
+let School="joy academy |";
+let Grade="A✿          |";
+let Section="B✿          |";
+let Roll ="23          |";
+console.log(" ----------------------------")
+let Mathematics=78;
+let English=85;
+let Hindi=95;
+console.log("| Name        =" ,name)
+console.log("| School Name = ",School)
+console.log("| Grade       = ",Grade)
+console.log("| Section     = ",Section)
+console.log("| Roll No     = ",Roll)
+console.log(" ----------------------------")
+console.log("                              ")
+console.log("✿_________✿ MARKS ✿_________✿")
+console.log("                              ")
+console.log(" .............................")
+console.log("                              ")
+console.log("   Subject","        ", "Marks")
+console.log("                           ")
+console.log("   01) Maths   =    ",Mathematics)
+console.log("   02) English =    ",English)
+console.log("   03) Hindi   =    ",Hindi)
+console.log(" .............................")

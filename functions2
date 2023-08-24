@@ -1,0 +1,145 @@
+// Write a function named addNumbers which takes two numbers as input and return their sum
+
+// Use the function to calculate the sum of given three numbers
+function addNumbers(num1,num2){
+  return num1+num2;
+}
+function addThreeNumbers(num1,num2,num3){
+  let sum2=addNumbers(num1,num2);
+  return sum2+num3
+}
+let sum3=addThreeNumbers(6,7,8)
+console.log("Sum Of Three Numbers = ",sum3)
+
+
+
+
+// Write code to find the absolute difference of two numbers
+
+// Sample Input-1 12,4
+// Sample Output-1 8
+// Sample Input-2 4,18
+// Sample Output-2 14
+// NOTE: It must consist of two functions 1. To find the difference 2. To find the absolute value
+function absolut_difference(a,b){
+  let n=Math.abs(a-b)
+  console.log(n)
+}
+
+absolut_difference(12,4)
+absolut_difference(4,18)
+
+
+
+// Write a function isOdd which returns a boolean value based on the number is odd or not
+// Use this function to print the odd numbers from 0 to a given limit(included)
+
+function isOdd(number) {
+  return number % 2 !== 0; 
+}
+
+
+function printOddNumbers(limit) {
+  for (let i = 0; i <= limit; i++) {
+    if (isOdd(i)) {
+      console.log(i);
+    }
+  }
+}
+printOddNumbers(20)
+
+
+// Write code to calculate the average of an array
+// If there are no items in the array it should return 0
+// NOTE: Create a function to find the sum of elements in an array and use that function to find out the average
+
+function findArraySum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+const numbers = [2, 4, 6, 8, 10]; 
+const sum = findArraySum(numbers);
+console.log("Sum:", sum);
+
+
+
+function findArrayAverage(arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+  
+  const sum = findArraySum(arr);
+  return sum / arr.length;
+}
+const number = [2, 4, 6, 8, 10]; 
+const average = findArrayAverage(numbers);
+console.log("Average:", average);
+
+
+
+
+// Write a function to convert a character to lower case
+// Use this function to convert a given word to lower case
+// Use that function to convert an array of strings to array of lower case strings
+// Sample Input ["MA", "SA", "I", "SCH", "OOL"]
+// Sample Output ["ma", "sa", "i", "sch", "ool"]
+function convert_char(array) {
+  
+  let lower_case = "abcdefghijklmnopqrstuvwxyz";
+  let upper_case = "ABCDEEFHIJKLMNOPQRSTUVWXYZ";
+  let arr = [];
+  for (let i = 0; i < array.length; i++) {
+    let str = array[i];
+     let bag = "";
+    for (let j = 0; j < str.length; j++) {
+    for(let k=0;k<lower_case.length;k++){
+      if(str[j]==upper_case[k]){
+        bag+=lower_case[k];
+      }
+    }
+    }
+
+    arr.push(bag);
+  
+  }
+
+  console.log(arr);
+}
+
+convert_char(["MA", "SA", "I", "SCH", "OOL"]);
+
+
+
+// Given a string swap the case and print the output
+// Sample Input - Test
+// Sample Output - tEST
+// NOTE: Use multiple functions to achieve the result, NOT one single code block
+function swap_char(str){
+  let lower_case="abcdefghijklmnopqrstuvwxyz";
+  let upper_case="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   let bag="";
+  for(let i=0;i<str.length;i++){
+    let n=str[i]
+    for(let j=0;j<lower_case.length;j++){
+    if(n==lower_case[j]){
+      bag+=upper_case[j]
+    }
+    else if(n==upper_case[j]){
+     bag+=lower_case[j]
+    }
+    }
+    
+  }console.log(bag)
+}
+swap_char("Test")
+
+
+
+
+
+
+

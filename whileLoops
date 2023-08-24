@@ -1,0 +1,60 @@
+// Problem 1: Print the numbers from the given starting point till ending point (including both start and end)
+let start=0;
+let ending=100;
+while(start<=ending){
+  console.log(start)
+  start++;
+}
+
+// Problem 2: Print the odd numbers from 0 till the given limit
+let start=0;
+let limit=20;
+while(start<=limit){
+  if(start%2!=0)
+  {
+    console.log(start)
+  }
+  start++;
+}
+
+
+
+
+// Problem 3: Print the sum of all the multiples of 3 from 0 to the given limit
+let start=0;
+let limit=20;
+let sum=0;
+while(start<=limit){
+  if(start%3==0){
+    console.log(start)
+    sum=sum+start;
+  }
+ 
+  start++;
+ 
+}
+ console.log("-------")
+console.log(sum);
+
+
+
+
+// Problem 4: Print the average of even numbers from 1 to 100 (both included)
+let start=1;
+let end=100;
+let count=0
+let sum=0;
+while(start<=end){
+  if(start%2==0){
+    console.log(start)
+    sum=sum+start;
+    count++;
+   
+  }
+  start++;
+}
+console.log(sum);
+console.log(count);
+console.log("Average"  + " " + sum/count)
+
+
