@@ -1,0 +1,78 @@
+// Problem 1: Given the year of birth, if the age is between 13 and 19 (both included) print Teenage and in between 20 and 29 (both included) print Twenties
+let dob=2002;
+let age=2023-dob;
+
+if(age>=13 && age<=19){
+  console.log("Teenage")
+}
+else if(age>=20 && age<=29){
+  console.log("Twenties")
+}
+
+
+
+// Problem 2 : Given any character, if it is a vowel print "Vowel"
+let vowel="e";
+if(vowel=="a" || vowel=="e" || vowel=="i" || vowel=="o" || vowel=="u" ){
+  console.log("Vowel")
+}
+else{
+  console.log("Consonent")
+}
+
+
+
+
+// Problem 3 : Given and character if it is a consonant print "Consonant"
+let consonent="f";
+if(consonent=="q" ||consonent=="w" ||consonent=="t" ||consonent=="r" ||consonent=="y" ||consonent=="p" ||consonent=="d" ||consonent=="s" ||consonent=="f" ||consonent=="g"  ||consonent=="h" ||consonent=="z" ||consonent=="j" ||consonent=="x" ||consonent=="k" ||consonent=="c" ||consonent=="l" ||consonent=="v" ||consonent=="m" ||consonent=="b" ||consonent=="n"){
+  console.log("consonents")
+}
+else{
+  console.log("vowels")
+}
+
+
+ // Given 3 numbers (all different values), print which is greatest
+let x=23;
+let y=67;
+let z=56;
+if(x>=y && x>=z){
+  console.log("x is grestest")
+}
+else if(y>=x && y>=z){
+  console.log("y is greatest")
+}
+else {
+  console.log("z is greatest")
+}
+
+
+
+
+// Problem 5: Given the days of the week in short format "Sun", "Mon" ... print in long format "Sunday", "Monday", ...
+let day="mon";
+
+switch(day){
+  case "sun":
+    console.log("sunday")
+    break;
+   case "mon":
+    console.log("monday")
+    break;
+   case "tue":
+    console.log("tuesday")
+    break;
+   case "wed":
+    console.log("wednesday")
+    break;
+   case "thu":
+    console.log("thursday")
+    break;
+   case "fri":
+    console.log("friday")
+    break;
+   case "sat":
+    console.log("saturday")
+    break;
+}
